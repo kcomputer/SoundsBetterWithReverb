@@ -7,6 +7,7 @@
 //
 
 #import "SBWRAppDelegate.h"
+#import "SBWRMasterViewController.h"
 
 @implementation SBWRAppDelegate
 
@@ -14,8 +15,16 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    self.viewController = [[SBWRMasterViewController alloc] initWithNibName:@"SBWRMasterViewController" bundle:nil];
+    
+    self.appNavigationController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+    [self.window setRootViewController:self.appNavigationController];
+    
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    _appNavigationController.navigationBarHidden = YES;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

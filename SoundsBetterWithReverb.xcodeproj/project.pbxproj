@@ -19,6 +19,13 @@
 		049957C7184787010096A1EA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049957AF184787010096A1EA /* UIKit.framework */; };
 		049957CF184787010096A1EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 049957CD184787010096A1EA /* InfoPlist.strings */; };
 		049957D1184787010096A1EA /* SoundsBetterWithReverbTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 049957D0184787010096A1EA /* SoundsBetterWithReverbTests.m */; };
+		049957F01847C33D0096A1EA /* SBWRMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049957EF1847C33D0096A1EA /* SBWRMasterViewController.m */; };
+		049957F21847CCA20096A1EA /* SBWRMasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049957F11847CCA20096A1EA /* SBWRMasterViewController.xib */; };
+		049958001847DA010096A1EA /* SBWRDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049957FE1847DA010096A1EA /* SBWRDetailsViewController.m */; };
+		049958011847DA010096A1EA /* SBWRDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049957FF1847DA010096A1EA /* SBWRDetailsViewController.xib */; };
+		049BD34D1847F572002E19DF /* Retina120Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BD34B1847F572002E19DF /* Retina120Icon.png */; };
+		049BD34E1847F572002E19DF /* SettingsIcon58.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BD34C1847F572002E19DF /* SettingsIcon58.png */; };
+		049BD3501847F58B002E19DF /* logo_bottomv4.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BD34F1847F58B002E19DF /* logo_bottomv4.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +55,15 @@
 		049957CC184787010096A1EA /* SoundsBetterWithReverbTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SoundsBetterWithReverbTests-Info.plist"; sourceTree = "<group>"; };
 		049957CE184787010096A1EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		049957D0184787010096A1EA /* SoundsBetterWithReverbTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundsBetterWithReverbTests.m; sourceTree = "<group>"; };
+		049957EE1847C33D0096A1EA /* SBWRMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBWRMasterViewController.h; sourceTree = "<group>"; };
+		049957EF1847C33D0096A1EA /* SBWRMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBWRMasterViewController.m; sourceTree = "<group>"; };
+		049957F11847CCA20096A1EA /* SBWRMasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBWRMasterViewController.xib; sourceTree = "<group>"; };
+		049957FD1847DA010096A1EA /* SBWRDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBWRDetailsViewController.h; sourceTree = "<group>"; };
+		049957FE1847DA010096A1EA /* SBWRDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBWRDetailsViewController.m; sourceTree = "<group>"; };
+		049957FF1847DA010096A1EA /* SBWRDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBWRDetailsViewController.xib; sourceTree = "<group>"; };
+		049BD34B1847F572002E19DF /* Retina120Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Retina120Icon.png; path = Images.xcassets/AppIcon.appiconset/Retina120Icon.png; sourceTree = "<group>"; };
+		049BD34C1847F572002E19DF /* SettingsIcon58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SettingsIcon58.png; path = Images.xcassets/AppIcon.appiconset/SettingsIcon58.png; sourceTree = "<group>"; };
+		049BD34F1847F58B002E19DF /* logo_bottomv4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_bottomv4.png; path = Images/logo_bottomv4.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +99,7 @@
 				049957A9184787010096A1EA /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		049957A9184787010096A1EA /* Products */ = {
 			isa = PBXGroup;
@@ -107,6 +124,9 @@
 		049957B1184787010096A1EA /* SoundsBetterWithReverb */ = {
 			isa = PBXGroup;
 			children = (
+				049957FC1847D9DC0096A1EA /* DetailsViewController */,
+				049957F71847D1990096A1EA /* CustomCell */,
+				049957EB1847B01F0096A1EA /* SBWRTableViewController */,
 				049957BA184787010096A1EA /* SBWRAppDelegate.h */,
 				049957BB184787010096A1EA /* SBWRAppDelegate.m */,
 				049957BD184787010096A1EA /* Images.xcassets */,
@@ -118,6 +138,8 @@
 		049957B2184787010096A1EA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				049957DB184794310096A1EA /* Icons */,
+				049957DA184794230096A1EA /* Images */,
 				049957B3184787010096A1EA /* SoundsBetterWithReverb-Info.plist */,
 				049957B4184787010096A1EA /* InfoPlist.strings */,
 				049957B7184787010096A1EA /* main.m */,
@@ -142,6 +164,50 @@
 				049957CD184787010096A1EA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		049957DA184794230096A1EA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				049BD34F1847F58B002E19DF /* logo_bottomv4.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		049957DB184794310096A1EA /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				049BD34B1847F572002E19DF /* Retina120Icon.png */,
+				049BD34C1847F572002E19DF /* SettingsIcon58.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+		049957EB1847B01F0096A1EA /* SBWRTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				049957EE1847C33D0096A1EA /* SBWRMasterViewController.h */,
+				049957EF1847C33D0096A1EA /* SBWRMasterViewController.m */,
+				049957F11847CCA20096A1EA /* SBWRMasterViewController.xib */,
+			);
+			name = SBWRTableViewController;
+			sourceTree = "<group>";
+		};
+		049957F71847D1990096A1EA /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CustomCell;
+			sourceTree = "<group>";
+		};
+		049957FC1847D9DC0096A1EA /* DetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				049957FD1847DA010096A1EA /* SBWRDetailsViewController.h */,
+				049957FE1847DA010096A1EA /* SBWRDetailsViewController.m */,
+				049957FF1847DA010096A1EA /* SBWRDetailsViewController.xib */,
+			);
+			name = DetailsViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,8 +286,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049BD34D1847F572002E19DF /* Retina120Icon.png in Resources */,
 				049957B6184787010096A1EA /* InfoPlist.strings in Resources */,
+				049BD3501847F58B002E19DF /* logo_bottomv4.png in Resources */,
+				049BD34E1847F572002E19DF /* SettingsIcon58.png in Resources */,
+				049957F21847CCA20096A1EA /* SBWRMasterViewController.xib in Resources */,
 				049957BE184787010096A1EA /* Images.xcassets in Resources */,
+				049958011847DA010096A1EA /* SBWRDetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +312,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				049957BC184787010096A1EA /* SBWRAppDelegate.m in Sources */,
+				049958001847DA010096A1EA /* SBWRDetailsViewController.m in Sources */,
+				049957F01847C33D0096A1EA /* SBWRMasterViewController.m in Sources */,
 				049957B8184787010096A1EA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +437,7 @@
 				GCC_PREFIX_HEADER = "SoundsBetterWithReverb/SoundsBetterWithReverb-Prefix.pch";
 				INFOPLIST_FILE = "SoundsBetterWithReverb/SoundsBetterWithReverb-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -377,6 +451,7 @@
 				GCC_PREFIX_HEADER = "SoundsBetterWithReverb/SoundsBetterWithReverb-Prefix.pch";
 				INFOPLIST_FILE = "SoundsBetterWithReverb/SoundsBetterWithReverb-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -442,6 +517,7 @@
 				049957D6184787010096A1EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		049957D7184787010096A1EA /* Build configuration list for PBXNativeTarget "SoundsBetterWithReverbTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +526,7 @@
 				049957D9184787010096A1EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
