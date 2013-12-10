@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0439E10C1854DA78007962E4 /* SBWRCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0439E10B1854DA78007962E4 /* SBWRCustomCell.xib */; };
+		0439E112185519D1007962E4 /* SBWRDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0439E111185519D1007962E4 /* SBWRDataManager.m */; };
+		047BDB3C185652C9002D7F24 /* SBWRContentXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 047BDB3B185652C9002D7F24 /* SBWRContentXMLParser.m */; };
 		049957AC184787010096A1EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049957AB184787010096A1EA /* Foundation.framework */; };
 		049957AE184787010096A1EA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049957AD184787010096A1EA /* CoreGraphics.framework */; };
 		049957B0184787010096A1EA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049957AF184787010096A1EA /* UIKit.framework */; };
@@ -39,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0439E10B1854DA78007962E4 /* SBWRCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBWRCustomCell.xib; sourceTree = "<group>"; };
+		0439E110185519D1007962E4 /* SBWRDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBWRDataManager.h; sourceTree = "<group>"; };
+		0439E111185519D1007962E4 /* SBWRDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBWRDataManager.m; sourceTree = "<group>"; };
+		047BDB3A185652C9002D7F24 /* SBWRContentXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBWRContentXMLParser.h; sourceTree = "<group>"; };
+		047BDB3B185652C9002D7F24 /* SBWRContentXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBWRContentXMLParser.m; sourceTree = "<group>"; };
 		049957A8184787010096A1EA /* SoundsBetterWithReverb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundsBetterWithReverb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049957AB184787010096A1EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		049957AD184787010096A1EA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -90,6 +98,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0439E10F1855198D007962E4 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				04A436781857A5B8004C1365 /* XMLParser */,
+				047BDB391856526D002D7F24 /* ContentParser */,
+				0439E110185519D1007962E4 /* SBWRDataManager.h */,
+				0439E111185519D1007962E4 /* SBWRDataManager.m */,
+			);
+			name = DataManager;
+			sourceTree = "<group>";
+		};
+		047BDB391856526D002D7F24 /* ContentParser */ = {
+			isa = PBXGroup;
+			children = (
+				047BDB3A185652C9002D7F24 /* SBWRContentXMLParser.h */,
+				047BDB3B185652C9002D7F24 /* SBWRContentXMLParser.m */,
+			);
+			name = ContentParser;
+			sourceTree = "<group>";
+		};
 		0499579F184787010096A1EA = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +152,7 @@
 		049957B1184787010096A1EA /* SoundsBetterWithReverb */ = {
 			isa = PBXGroup;
 			children = (
+				0439E10F1855198D007962E4 /* DataManager */,
 				049957FC1847D9DC0096A1EA /* DetailsViewController */,
 				049957F71847D1990096A1EA /* CustomCell */,
 				049957EB1847B01F0096A1EA /* SBWRTableViewController */,
@@ -187,8 +216,8 @@
 			isa = PBXGroup;
 			children = (
 				049957EE1847C33D0096A1EA /* SBWRMasterViewController.h */,
-				049957EF1847C33D0096A1EA /* SBWRMasterViewController.m */,
 				049957F11847CCA20096A1EA /* SBWRMasterViewController.xib */,
+				049957EF1847C33D0096A1EA /* SBWRMasterViewController.m */,
 			);
 			name = SBWRTableViewController;
 			sourceTree = "<group>";
@@ -196,6 +225,7 @@
 		049957F71847D1990096A1EA /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
+				0439E10B1854DA78007962E4 /* SBWRCustomCell.xib */,
 			);
 			name = CustomCell;
 			sourceTree = "<group>";
@@ -208,6 +238,13 @@
 				049957FF1847DA010096A1EA /* SBWRDetailsViewController.xib */,
 			);
 			name = DetailsViewController;
+			sourceTree = "<group>";
+		};
+		04A436781857A5B8004C1365 /* XMLParser */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = XMLParser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +325,7 @@
 			files = (
 				049BD34D1847F572002E19DF /* Retina120Icon.png in Resources */,
 				049957B6184787010096A1EA /* InfoPlist.strings in Resources */,
+				0439E10C1854DA78007962E4 /* SBWRCustomCell.xib in Resources */,
 				049BD3501847F58B002E19DF /* logo_bottomv4.png in Resources */,
 				049BD34E1847F572002E19DF /* SettingsIcon58.png in Resources */,
 				049957F21847CCA20096A1EA /* SBWRMasterViewController.xib in Resources */,
@@ -311,7 +349,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047BDB3C185652C9002D7F24 /* SBWRContentXMLParser.m in Sources */,
 				049957BC184787010096A1EA /* SBWRAppDelegate.m in Sources */,
+				0439E112185519D1007962E4 /* SBWRDataManager.m in Sources */,
 				049958001847DA010096A1EA /* SBWRDetailsViewController.m in Sources */,
 				049957F01847C33D0096A1EA /* SBWRMasterViewController.m in Sources */,
 				049957B8184787010096A1EA /* main.m in Sources */,

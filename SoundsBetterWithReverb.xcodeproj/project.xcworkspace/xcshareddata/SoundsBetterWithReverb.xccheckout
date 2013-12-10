@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>161273AD-1304-498F-B0BF-844F00F6BDAF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SoundsBetterWithReverb</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>67E0C157-9F9C-4868-AD4F-B1657BADD08D</key>
+		<string>https://github.com/kcomputer/SoundsBetterWithReverb.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SoundsBetterWithReverb.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>67E0C157-9F9C-4868-AD4F-B1657BADD08D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kcomputer/SoundsBetterWithReverb.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>67E0C157-9F9C-4868-AD4F-B1657BADD08D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>67E0C157-9F9C-4868-AD4F-B1657BADD08D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SoundsBetterWithReverb</string>
+		</dict>
+	</array>
+</dict>
+</plist>

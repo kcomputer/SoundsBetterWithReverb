@@ -15,6 +15,9 @@
     NSMutableDictionary *item;
     NSMutableString *title;
     NSMutableString *link;
+    NSMutableString *imageUrl;
+    NSMutableString *text;
+    NSMutableString *content;
     NSString *element;
 }
 @end
@@ -23,14 +26,29 @@
 
 
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    feeds = [[NSMutableArray alloc] init];
-    NSURL *url = [NSURL URLWithString:@"http://www.soundsbetterwithreverb.com/feed/"];
-    parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
-    [parser setDelegate:self];
-    [parser setShouldResolveExternalEntities:NO];
-    [parser parse];
+    
+    dispatch_queue_t loaderQ = dispatch_queue_create("Data downloader", NULL);
+    dispatch_async(loaderQ, ^{
+        SBWRDataManager *manager= [[SBWRDataManager alloc] init];
+        feeds = [manager getFeed];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (feeds){
+                NSLog(@"%@",feeds);
+                [self.tableView reloadData];
+            }
+        });
+    });
+//    SBWRDataManager *manager= [[SBWRDataManager alloc] init];
+//    feeds = [ manager getFeed];
+    //[[NSMutableArray alloc] init];
+//    NSURL *url = [NSURL URLWithString:@"http://www.soundsbetterwithreverb.com/feed/"];
+//    parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
+//    [parser setDelegate:self];
+//    [parser setShouldResolveExternalEntities:NO];
+//    [parser parse];
 }
 
 
@@ -38,6 +56,10 @@
 {
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = YES;
+    
+//    SBWRContentXMLParser *pars = [[SBWRContentXMLParser alloc] initWithString:[feeds[0] objectForKey:@"link"]];
+//    NSLog(@"%@",feeds);
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,7 +81,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
-    
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -79,51 +100,7 @@
 
 
 
-- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
-    
-    element = elementName;
-    
-    if ([element isEqualToString:@"item"]) {
-        
-        item    = [[NSMutableDictionary alloc] init];
-        title   = [[NSMutableString alloc] init];
-        link    = [[NSMutableString alloc] init];
-        
-    }
-    
-}
 
-- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
-    
-    if ([elementName isEqualToString:@"item"]) {
-        
-        [item setObject:title forKey:@"title"];
-        [item setObject:link forKey:@"link"];
-        
-        [feeds addObject:[item copy]];
-        
-    }
-    
-}
-
-- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
-    
-    if ([element isEqualToString:@"title"] && ![string isEqualToString:@"\n\t\t"] ){
-        [title appendString:string];
-        ///NSLog(@"Title is: %@", string);
-    } else if ([element isEqualToString:@"content:encoded"] && ![string isEqualToString:@"n\t\t\t"] && ![string isEqualToString:@"n\t\t\t\t"]) {
-        [link appendString:string];
-        //NSLog(@"Link is: %@", string);
-    }
-    
-    
-}
-
-- (void)parserDidEndDocument:(NSXMLParser *)parser {
-    
-    [self.tableView reloadData];
-    
-}
 
 
 

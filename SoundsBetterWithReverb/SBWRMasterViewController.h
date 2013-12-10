@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "SBWRDetailsViewController.h"
-
-@interface SBWRMasterViewController : UIViewController <NSXMLParserDelegate, UITableViewDataSource, UITableViewDelegate>
+#import "SBWRDataManager.h"
+@interface SBWRMasterViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
+
 
 
 
