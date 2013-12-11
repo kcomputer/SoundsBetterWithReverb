@@ -57,7 +57,7 @@
     correctHtmlString =
     [correctHtmlString stringByReplacingOccurrencesOfString:@"</h2>" withString:@"]]></h2>"];
     correctHtmlString =
-    [correctHtmlString stringByReplacingOccurrencesOfString:@"ve)</p" withString:@"]]>ve)</p"];
+    [correctHtmlString stringByReplacingOccurrencesOfString:@")</p" withString:@"]]>)</p"];
     return correctHtmlString;
     
 }

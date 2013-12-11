@@ -25,6 +25,8 @@
     _appNavigationController.navigationBarHidden = YES;
     [self.window makeKeyAndVisible];
     
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
     return YES;
 }
 

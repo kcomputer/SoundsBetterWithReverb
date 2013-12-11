@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "SBWRDetailsViewController.h"
 #import "SBWRDataManager.h"
+
+#import "SBWRCustomCell.h"
+
 @interface SBWRMasterViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;

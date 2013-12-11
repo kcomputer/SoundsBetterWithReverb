@@ -10,9 +10,13 @@
 
 @interface SBWRDetailsViewController : UIViewController
 
-@property (copy, nonatomic) NSString *url;
+@property (copy, nonatomic) NSMutableDictionary *data;
+
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 
-- (id)initWithStringUrl: (NSString *) stringUrl;
+- (id)initWithData: (NSMutableDictionary *)data;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
+@property (strong, nonatomic) IBOutlet UILabel *label;
 
 @end

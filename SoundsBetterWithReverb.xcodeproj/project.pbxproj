@@ -10,6 +10,7 @@
 		0439E10C1854DA78007962E4 /* SBWRCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0439E10B1854DA78007962E4 /* SBWRCustomCell.xib */; };
 		0439E112185519D1007962E4 /* SBWRDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0439E111185519D1007962E4 /* SBWRDataManager.m */; };
 		047BDB3C185652C9002D7F24 /* SBWRContentXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 047BDB3B185652C9002D7F24 /* SBWRContentXMLParser.m */; };
+		0498023F18587D9F00AF396B /* SBWRCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0498023E18587D9E00AF396B /* SBWRCustomCell.m */; };
 		049957AC184787010096A1EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049957AB184787010096A1EA /* Foundation.framework */; };
 		049957AE184787010096A1EA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049957AD184787010096A1EA /* CoreGraphics.framework */; };
 		049957B0184787010096A1EA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049957AF184787010096A1EA /* UIKit.framework */; };
@@ -47,6 +48,8 @@
 		0439E111185519D1007962E4 /* SBWRDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBWRDataManager.m; sourceTree = "<group>"; };
 		047BDB3A185652C9002D7F24 /* SBWRContentXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBWRContentXMLParser.h; sourceTree = "<group>"; };
 		047BDB3B185652C9002D7F24 /* SBWRContentXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBWRContentXMLParser.m; sourceTree = "<group>"; };
+		0498023D18587D9E00AF396B /* SBWRCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBWRCustomCell.h; sourceTree = "<group>"; };
+		0498023E18587D9E00AF396B /* SBWRCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBWRCustomCell.m; sourceTree = "<group>"; };
 		049957A8184787010096A1EA /* SoundsBetterWithReverb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundsBetterWithReverb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049957AB184787010096A1EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		049957AD184787010096A1EA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -216,8 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				049957EE1847C33D0096A1EA /* SBWRMasterViewController.h */,
-				049957F11847CCA20096A1EA /* SBWRMasterViewController.xib */,
 				049957EF1847C33D0096A1EA /* SBWRMasterViewController.m */,
+				049957F11847CCA20096A1EA /* SBWRMasterViewController.xib */,
 			);
 			name = SBWRTableViewController;
 			sourceTree = "<group>";
@@ -226,6 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				0439E10B1854DA78007962E4 /* SBWRCustomCell.xib */,
+				0498023D18587D9E00AF396B /* SBWRCustomCell.h */,
+				0498023E18587D9E00AF396B /* SBWRCustomCell.m */,
 			);
 			name = CustomCell;
 			sourceTree = "<group>";
@@ -350,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				047BDB3C185652C9002D7F24 /* SBWRContentXMLParser.m in Sources */,
+				0498023F18587D9F00AF396B /* SBWRCustomCell.m in Sources */,
 				049957BC184787010096A1EA /* SBWRAppDelegate.m in Sources */,
 				0439E112185519D1007962E4 /* SBWRDataManager.m in Sources */,
 				049958001847DA010096A1EA /* SBWRDetailsViewController.m in Sources */,
